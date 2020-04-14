@@ -3,7 +3,7 @@ const Food = require("../models/Food.model");
 require("../configs/db.config");
 // User.collection.drop();
 
-const food = [
+const foods = [
   {
     path: "https://ca.slack-edge.com/T02CQ4EN4-UNCE3P0EL-1f41629c62fc-512",
     title: "",

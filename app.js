@@ -41,7 +41,7 @@ app.locals.title = "Express - Generated with IronGenerator";
 //      |  |  |
 //      V  V  V
 app.use("/", require("./routes/index.routes"));
-app.use("/", require("./routes/book.routes"));
+app.use("/", require("./routes/food.routes"));
 app.use("/api/events", require("./routes/event.routes"));
 app.use("/api/auth", require("./routes/authentication.routes"));
 app.use("/api/user", require("./routes/user.routes"));
