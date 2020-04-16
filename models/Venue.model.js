@@ -16,14 +16,14 @@ const venuesSchema = new Schema(
         "Night Club",
       ],
     },
-    owner: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     date: { type: Date, default: Date.now },
-    available: { type: Boolean },
+    title: {type: String},
+    address: {type: String},
     description: { type: String },
-    location: { type: String },
     price: { type: Number },
-    image: { type: String },
-    imageArray: { type: [String] },
+    google_rating: { type: Number },
+    google_reviews: { type: Number },
+    thumbnail_url: { type: String }
   },
   {
     // keeps record when is created and updated

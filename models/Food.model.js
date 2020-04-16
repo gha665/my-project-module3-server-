@@ -11,8 +11,11 @@ const foodSchema = new Schema(
       enum: ["Latin American", "European", "World Cuisine"],
     },
     description: String,
-    rating: Number,
     price: Number,
+    menu: Array,
+    google_rating: { type: Number },
+    google_reviews: { type: Number },
+    thumbnail_url: { type: String }
   },
   {
     timestamps: true,

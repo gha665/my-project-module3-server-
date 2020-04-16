@@ -5,12 +5,15 @@ require("../configs/db.config");
 
 const foods = [
   {
-    path: "https://ca.slack-edge.com/T02CQ4EN4-UNCE3P0EL-1f41629c62fc-512",
-    title: "",
-    origin: "",
-    description: "",
-    rating: 5,
-    price: $10,
+    title: "Sergio's Restaurant",
+    origin: "Latin American",
+    description:
+      "Modest outlet of a family-owned chain packing in diners for all-day breakfast & late-night dinner.",
+    price: 50,
+    menu: ["Churassco", "Ropa Verj"],
+    google_rating: 4.3,
+    google_reviews: 2158,
+    thumbnail_url: "https://image-of-restaurant-here.jpg",
   },
 ];
 
