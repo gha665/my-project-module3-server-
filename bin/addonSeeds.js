@@ -1,4 +1,5 @@
-// const mongoose = require("mongoose");
+const mongoose = require("mongoose");
+const AddOn
 // const { Schema, model } = mongoose;
 
 // const addonsSchema = new Schema(

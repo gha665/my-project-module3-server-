@@ -12,10 +12,10 @@ const eventsSchema = new Schema(
 
     venue: { type: mongoose.Schema.Types.ObjectId, ref: "Venue" },
     food: { type: mongoose.Schema.Types.ObjectId, ref: "Food" },
-    add_ons: [{ type: mongoose.Schema.Types.ObjectId, ref: "AddOn" }],
+    addons: [{ type: mongoose.Schema.Types.ObjectId, ref: "AddOn" }],
 
     price: { type: Number }, // SUM'd up at the end with all price's of models
-    
+
     // IH: available: { type: Boolean },
     // IH: image: { type: String },
     // IH: imageArray: { type: [String] },
