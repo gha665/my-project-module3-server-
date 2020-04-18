@@ -17,13 +17,13 @@ const venuesSchema = new Schema(
       ],
     },
     date: { type: Date, default: Date.now },
-    title: {type: String},
-    address: {type: String},
+    title: { type: String },
+    address: { type: String },
     description: { type: String },
     price: { type: Number },
     google_rating: { type: Number },
     google_reviews: { type: Number },
-    thumbnail_url: { type: String }
+    thumbnail_url: { type: String },
   },
   {
     // keeps record when is created and updated
