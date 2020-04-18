@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Food = require("../models/Food.model");
 require("../configs/db.config");
-// User.collection.drop();
+// Food.collection.drop();
 
 const foods = [
   {

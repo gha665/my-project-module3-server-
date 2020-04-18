@@ -21,13 +21,13 @@ const users = [
     password: "$2a$10$cBne2GrXta1ipTGcikZZWOZhsHmj0tLV8G6sn.Hlt1EpqoLpC6Hp2",
   },
   {
+    path:
+      "http://res.cloudinary.com/dml50vwsd/image/upload/v1581608885/users/IMG_2612.JPG.jpg",
     username: "ashraf",
     firstName: "Ashrafzhon",
     lastName: "Kurbonaliev",
     email: "alforsii@gmail.com",
     password: "$2a$10$XHvjKPJdm4H6p3YVvqXiGe32fCXwCZuzZNYYpXlHjotyXeXmWe/1W",
-    path:
-      "http://res.cloudinary.com/dml50vwsd/image/upload/v1581608885/users/IMG_2612.JPG.jpg",
   },
   {
     path:
