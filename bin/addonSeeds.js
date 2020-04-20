@@ -9,7 +9,7 @@ const addons = [
     title: "DJ",
     name: "Dionte",
     description:
-      "Dionte is a multifaceted performer, accomplished open format DJ and producer, and a professional dancer. His genuine love for music and enthusiasm makes him a fun and pleasant performer to work with, while his energetic and lively beats compel crowds to move freely, ensuring an enjoyable atmosphere for any event.",
+      "Dionte is a multifaceted performer, accomplished open format DJ and producer, and a professional dancer. His genuine love for music and enthusiasm makes him a fun and pleasant performer to work with, ensuring an enjoyable atmosphere for any event.",
     price: 500,
     thumbnail_url: "https://ukiproductions.com/images/djs/demo-cover.jpg",
   },
@@ -18,7 +18,7 @@ const addons = [
     title: "DJ",
     name: "Romana",
     description:
-      "Romana is an international DJ based in Miami and is known for her musical talent, energy and sense of fashion. Her diverse style of mixing is what sets her apart and allows her to adapt to any crowd, ensuring every event is musically unique.",
+      "Romana is an international DJ based in Miami and is known for her musical talent, energy and sense of fashion. Her diverse style of mixing is what sets her apart, ensuring every event is musically unique.",
     price: 600,
     thumbnail_url: "https://ukiproductions.com/images/djs/romilux-2.jpg",
   },
@@ -27,7 +27,7 @@ const addons = [
     title: "DJ",
     name: "Miguel",
     description:
-      "Miguel started mixing in his college years as a hobby and has since become a well-known and respected entertainer and producer throughout the Latin community. His unique mixes, thrilling beats and outstanding performance is guaranteed to bring the crowd at your event to the dance floor!",
+      "Miguel has since become a well-known and respected entertainer and producer throughout the Latin community. His unique mixes is guaranteed to bring the crowd at your event to the dance floor!",
     price: 500,
     thumbnail_url: "https://ukiproductions.com/images/djs/mate-cover.jpg",
   },
@@ -75,7 +75,7 @@ const addons = [
     title: "Singer",
     name: "Deb",
     description:
-      "A gifted composer in her own right, Deb posesses a wide range of uniquely romantic and soulful tunes in her catalog. Along with her work as a published songwriter, recording artist, music producer/arranger, and piano accompanist, Deb’s achievements include three one-woman musical shows.",
+      "A gifted composer, Deb posesses a wide range of uniquely romantic and soulful tunes in her catalog. Along with her work as a published songwriter, recording artist, music producer/arranger, and piano accompanist, Deb’s achievements include three one-woman musical shows.",
     price: 1400,
     thumbnail_url:
       "https://static.wixstatic.com/media/f6d1b3_fb6800cc3be8427a9fcdfef25d70e092.jpg/v1/fill/w_313,h_504,al_c,q_80,usm_0.66_1.00_0.01/f6d1b3_fb6800cc3be8427a9fcdfef25d70e092.webp",
