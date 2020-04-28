@@ -12,9 +12,9 @@ const routeGuard = require("../configs/route-guard.config");
 
 // .post() route ==> to process form data
 router.post("/signup", (req, res, next) => {
-  const { username, email, password } = req.body;
-
-  if (!username || !email || !password) {
+  const { firstName, lastName, email, password } = req.body;
+  // console.log("USER", firstName, lastName, email, password);
+  if (!firstName || !lastName || !email || !password) {
     res.status(401).json({
       message:
         "All fields are mandatory. Please provide your username, email and password.",
@@ -36,12 +36,13 @@ router.post("/signup", (req, res, next) => {
     .then((salt) => bcryptjs.hash(password, salt))
     .then((hashedPassword) => {
       return User.create({
-        username,
-        email,
+        // firstName,
+        // lastName,
+        // email,
+        ...req.body,
         passwordHash: hashedPassword,
       })
         .then((user) => {
-          // user.passwordHash = undefined;
           // res.status(200).json({ user });
           req.login(user, (err) => {
             if (err)
@@ -68,7 +69,7 @@ router.post("/signup", (req, res, next) => {
     .catch((err) => next(err));
 });
 
-router.post("/login", routeGuard, (req, res, next) => {
+router.post("/login", (req, res, next) => {
   passport.authenticate("local", (err, user, failureDetails) => {
     console.log("user", user);
     if (err) {
@@ -113,7 +114,6 @@ router.get("/users", (req, res) => {
     })
     .catch((err) => console.log(err));
 });
-
 
 //
 

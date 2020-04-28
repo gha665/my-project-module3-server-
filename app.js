@@ -3,7 +3,6 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const express = require("express");
-// const favicon = require("serve-favicon");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 const path = require("path");
@@ -35,15 +34,39 @@ app.use(express.static(path.join(__dirname, "public")));
 // default value for title local
 app.locals.title = "Express - Generated with IronGenerator";
 
+// ============================= CORS FIX ======
+// app.use((req, res, next) => {
+//   res.header(
+//     "Access-Control-Allow-Origin",
+//     "http://localhost:5000/api/auth/signup.TLD"
+//     ); // <=== Update to match the domain you will make the request from
+//   res.header(
+//     "Access-Control-Allow-Headers, Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
+
+// app.get("/", (req, res, next) => {
+//   // Handle the GET for this route
+// });
+
+// app.post("/", (req, res, next) => {
+//   // Handle the POST for this route
+// });
+// ============================= END OF CORS FIX ======
+
+
+
 // const index = require('./routes/index');
 // app.use('/', index);
 //      |  |  |
 //      |  |  |
 //      V  V  V
 app.use("/", require("./routes/index.routes"));
-app.use("/", require("./routes/food.routes"));
-app.use("/api/events", require("./routes/event.routes"));
-app.use("/api/auth", require("./routes/authentication.routes"));
 app.use("/api/user", require("./routes/user.routes"));
+app.use("/api/auth", require("./routes/authentication.routes"));
+app.use("/api/events", require("./routes/event.routes"));
+app.use("/api/food", require("./routes/food.routes"));
+app.use("/api/addons", require("./routes/addon.routes"));
 
 module.exports = app;
