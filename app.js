@@ -1,4 +1,5 @@
 require("dotenv").config();
+const cors = require("cors");
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -29,6 +30,12 @@ require("./configs/session.config")(app);
 require("./configs/passport/passport.config.js")(app);
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(
+  cors({
+    origin: process.env.FRONTEND_POINT,
+    credentials: true,
+  })
+);
 // app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // default value for title local
@@ -54,8 +61,6 @@ app.locals.title = "Express - Generated with IronGenerator";
 //   // Handle the POST for this route
 // });
 // ============================= END OF CORS FIX ======
-
-
 
 // const index = require('./routes/index');
 // app.use('/', index);
