@@ -25,7 +25,17 @@ eventRouter.post("/", (req, res, next) => {
 
 eventRouter.get("/", (req, res, next) => {
   Event.find() // <-- .find() method gives us always an ARRAY back
-    .then((eventsFromDB) => res.status(200).json({ events: eventsFromDB }))
+    .then((eventsFromDB) => {
+      const events = {};
+      eventsFromDB.map((event) => {
+        if (!events[event.eventType]) {
+          events[event.eventType] = event;
+        } else {
+          events[event.eventType].push(event);
+        }
+      });
+      res.status(200).json({ events });
+    })
     .catch((err) => next(err));
 });
 
@@ -45,7 +55,9 @@ eventRouter.post("/event/update/:eventId", (req, res) => {
 eventRouter.post("/event/delete/:eventId", (req, res) => {
   // console.log(req.body);
   Event.findByIdAndDelete({ _id: req.params.eventId })
-    .then((deletedEvent) => res.status(200).json({ message: `${deletedEvent.eventType} was deleted` }))
+    .then((deletedEvent) =>
+      res.status(200).json({ message: `${deletedEvent.eventType} was deleted` })
+    )
     .catch((err) => console.log(err));
 });
 

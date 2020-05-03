@@ -3,22 +3,18 @@ const { Schema, model } = mongoose;
 
 const eventsSchema = new Schema(
   {
-    eventType: { type: String, enum: ["Conference", "Wedding", "Birthday"] },
+    eventType: { type: String, enum: ["conference", "wedding", "birthday"] },
     owner: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     date: { type: Date, default: Date.now },
     description: { type: String },
-
+    thumbnail_url: { type: String },
     guests: { type: Number },
 
     venue: { type: mongoose.Schema.Types.ObjectId, ref: "Venue" },
-    food: { type: mongoose.Schema.Types.ObjectId, ref: "Food" },
+    food: { type: String },
     addons: [{ type: mongoose.Schema.Types.ObjectId, ref: "AddOn" }],
 
     price: { type: Number }, // SUM'd up at the end with all price's of models
-
-    // IH: available: { type: Boolean },
-    // IH: image: { type: String },
-    // IH: imageArray: { type: [String] },
   },
   {
     // keeps record when is created and updated
