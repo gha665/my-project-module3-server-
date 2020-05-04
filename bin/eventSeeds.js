@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Event = require("../models/Event.model");
-const ConferenceIcon = require("../../my-project-module3(client)/src/pics/eventPics")
+// const ConferenceIcon = require("../../my-project-module3(client)/src/pics/eventPics")
 require("../configs/db.config");
 // User.collection.drop();
 

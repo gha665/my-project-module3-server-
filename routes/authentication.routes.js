@@ -89,6 +89,7 @@ router.post("/login", (req, res, next) => {
           .json({ message: "Something went wrong with login" });
       user.passwordHash = undefined;
       res.status(200).json({ message: "Login successful", user });
+      
     });
   })(req, res, next);
 });
@@ -114,7 +115,5 @@ router.get("/users", (req, res) => {
     })
     .catch((err) => console.log(err));
 });
-
-//
 
 module.exports = router;
