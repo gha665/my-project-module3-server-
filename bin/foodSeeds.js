@@ -317,3 +317,5 @@ Food.create(foods)
     console.log(`Foods are created`);
   })
   .catch((err) => console.log(`Error while creating new foods ${err}`));
+
+export const foodData = foods;
