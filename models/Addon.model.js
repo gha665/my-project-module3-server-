@@ -8,7 +8,7 @@ const addonsSchema = new Schema(
     name: { type: String },
     description: { type: String },
     price: { type: Number },
-    thumbnail_url: { type: String }
+    thumbnail_url: { type: String },
   },
   {
     // keeps record when is created and updated
