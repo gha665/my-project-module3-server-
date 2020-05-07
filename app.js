@@ -32,7 +32,7 @@ require("./configs/passport/passport.config.js")(app);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(
   cors({
-    origin: process.env.FRONTEND_POINT,
+    origin: true, //process.env.FRONTEND_POINT,
     credentials: true,
   })
 );
