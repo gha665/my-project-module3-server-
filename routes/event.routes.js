@@ -24,17 +24,19 @@ eventRouter.post("/", (req, res, next) => {
 // ****************************************************************************************
 
 eventRouter.get("/", (req, res, next) => {
-  Event.find() // <-- .find() method gives us always an ARRAY back
+  Event.find({}) // <-- .find() method gives us always an ARRAY back
     .then((eventsFromDB) => {
-      const events = {};
-      eventsFromDB.map((event) => {
-        if (!events[event.eventType]) {
-          events[event.eventType] = event;
-        } else {
-          events[event.eventType].push(event);
-        }
-      });
-      res.status(200).json({ events });
+      // console.log(eventsFromDB);
+
+      // const events = {};
+      // eventsFromDB.map((event) => {
+      //   if (!events[event.eventType]) {
+      //     events[event.eventType] = event;
+      //   } else {
+      //     events[event.eventType].push(event);
+      //   }
+      // });
+      res.status(200).json(eventsFromDB);
     })
     .catch((err) => next(err));
 });
